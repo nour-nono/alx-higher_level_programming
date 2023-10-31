@@ -8,15 +8,17 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *curr;
+	listint_t *itr1, *itr2;
 
 	if (!list)
 		return (0);
-	curr = list;
-	while (curr->next != NULL && curr->next != list)
-		curr = curr->next;
-	if (curr->next == NULL)
-		return (0);
-	else
-		return (1);
+	itr1 = list, itr2 = list->next;
+	while (itr2 != NULL && itr2->next != NULL)
+	{
+		itr1 = itr1->next;
+		itr2 = itr2->next->next;
+		if (itr2 == itr1 ||itr2 == itr1->next)
+			return (1);
+	}
+	return (0);
 }
