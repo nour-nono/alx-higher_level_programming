@@ -4,4 +4,3 @@ for i in range(0, 8):
         if i != j:
             print("{}{}, ".format(i, j), end="")
 print(89)
-
