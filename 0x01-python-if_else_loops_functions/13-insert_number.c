@@ -9,8 +9,7 @@
  */
 listint_t *insert_node(listint_t **head, int number)
 {
-	unsigned int cnt = 1;
-	listint_t *x, *y, *new_node;
+	listint_t *x, *new_node;
 
 	if (!head)
 		return (NULL);
