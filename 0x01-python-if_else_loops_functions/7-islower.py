@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 def islower(c):
-    return str(c).islower()
+    number = ord(c)
+    return number >= 97 and number <= 122
