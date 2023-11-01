@@ -1,5 +1,11 @@
 #!/usr/bin/python3
-def islower(c):
-    ord(c)
-    return number >= 97 and number <= 122
-
+def uppercase(st):
+    for i in st:
+        if str(i).isalpha():
+            if i.islower():
+                print(chr(ord(i) - 32), end="")
+            else:
+                print(i, end="")
+        else:
+            print(i, end="")
+    print()
