@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 def uppercase(st):
     for i in st:
-        if str(i).isalpha():
-            if i.islower():
-                print(chr(ord(i) - 32), end="")
-            else:
-                print(i, end="")
+        if str(i).isalpha() and i.islower():
+            j = chr(ord(i) - 32)
         else:
-            print(i, end="")
+            j = i
+        print(j, end="")
     print()
