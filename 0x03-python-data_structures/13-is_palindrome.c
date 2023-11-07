@@ -9,7 +9,8 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t **head_copy = head;
+	listint_t *head2 = *head;
+	listint_t **head_copy = &head2;
 
 	if (head == NULL || *head == NULL)
 		return (1);
