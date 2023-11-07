@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "lists.h"
 
-int recursive_palindrom(listint_t **head, listint_t *end);
 /**
  * is_palindrome - adds a new node at the end of a listint_t list
  * @head: pointer to pointer of first node of listint_t list
