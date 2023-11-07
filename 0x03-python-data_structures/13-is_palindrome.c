@@ -9,13 +9,14 @@
  */
 int is_palindrome(listint_t **head)
 {
+	listint_t **head_copy = head;
+
 	if (head == NULL || *head == NULL)
 		return (1);
-	listint_t **head_copy = head;
 	return (recursive_palindrom(head_copy, *head));
 }
 /**
- * add_nodeint_end - adds a new node at the end of a listint_t list
+ * recursive_palindrom - adds a new node at the end of a listint_t list
  * @head: pointer to pointer of first node of listint_t list
  * @end: integer to be included in new node
  * Return: address of the new element or NULL if it fails
