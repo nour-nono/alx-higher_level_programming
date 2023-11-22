@@ -20,7 +20,8 @@ class Square:
     def __str__(self):
         """ info about instance
         """
-        return f"{self.my_print()}"
+        self.my_print()
+        return ("")
 
     def area(self):
         """methode area to compute the area of the square
