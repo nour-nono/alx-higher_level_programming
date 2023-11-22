@@ -3,6 +3,7 @@
 
 
 class Square:
+    """ this is square class"""
     def __init__(self):
         """ this is the constructor """
         pass
