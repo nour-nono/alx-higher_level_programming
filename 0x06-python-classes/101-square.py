@@ -84,16 +84,19 @@ class Square:
         self.__position = value
 
     def __str__(self):
-        """Same print behaviour as my_print"""
+        """ info about instance
+        """
         s = ""
-        if not self.__size:
+        if self.__size == 0:
+            s += '\n'
             return s
-        for y in range(self.__position[1]):
+        for i in range(self.__position[1]):
             s += '\n'
-        for i in range(self.__size):
-            for x in range(self.__position[0]):
-                s += ' '
-            for j in range(self.__size):
-                s += '#'
-            s += '\n'
-        return s[: - 1]
+        for x in range(self.__size):
+            for j in range(self.__position[0]):
+                s += " "
+            for z in range(self.__size):
+                s += "#"
+            if x != (self.__size - 1):
+                s += '\n'
+        return s
