@@ -1,9 +1,10 @@
-#!/usr/bin/python3
+# !/usr/bin/python3
 """ this is square module, and it is the first in oop """
 
 
 class Square:
     """ this is square class"""
+
     def __init__(self, size=0, position=(0, 0)):
         """ this is the constructor
             Args:
@@ -16,12 +17,6 @@ class Square:
         """
         self.size = size
         self.position = position
-
-    def __str__(self):
-        """ info about instance
-        """
-        self.my_print()
-        return ("")
 
     def area(self):
         """methode area to compute the area of the square
@@ -82,8 +77,14 @@ class Square:
             Args:
                 value: size value.
         """
-        if type(value) != tuple or len(value) != 2\
-            or type(value[0]) is not int or type(value[1]) is not int\
-                or value[0] < 0 or value[1] < 0:
+        if type(value) != tuple or len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if any(type(i) != int for i in value) or any(j < 0 for j in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
+
+    def __str__(self):
+        """ info about instance
+        """
+        self.my_print()
+        return ""
