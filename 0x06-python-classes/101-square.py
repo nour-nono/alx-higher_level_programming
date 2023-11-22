@@ -1,4 +1,4 @@
-# !/usr/bin/python3
+#!/usr/bin/python3
 """ this is square module, and it is the first in oop """
 
 
