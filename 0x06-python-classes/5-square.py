@@ -12,7 +12,7 @@ class Square:
                 TypeError: If size is not an integer.
                 ValueError: If size is less than 0.
         """
-        self.size = size
+        self.__size = size
 
     def area(self):
         """methode area to compute the area of the square
