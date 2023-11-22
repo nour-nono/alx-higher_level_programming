@@ -70,10 +70,11 @@ class Square:
     def my_print(self):
         """ methode my_print prints in stdout the square with the character #
         """
+        for y in range(self.__position[1]):
+            print()
         for x in range(self.__size):
-            if self.__position[1] <= 0:
-                for y in range(self.__position[0]):
-                    print(" ", end="")
+            for y in range(self.__position[0]):
+                print(" ", end="")
             for y in range(self.__size):
                 print("#", end="")
             print()
