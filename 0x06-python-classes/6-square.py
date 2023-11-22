@@ -14,8 +14,8 @@ class Square:
                 or position is not a tuple of 2 positive integers.
                 ValueError: If size is less than 0.
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """methode area to compute the area of the square
