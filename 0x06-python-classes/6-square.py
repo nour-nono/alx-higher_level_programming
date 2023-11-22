@@ -24,7 +24,7 @@ class Square:
                the area of the square.
            """
         return self.__size ** 2
-    
+ 
     def my_print(self):
         """ methode my_print prints in stdout the square with the character #
         """
@@ -39,7 +39,7 @@ class Square:
             for z in range(self.__size):
                 print("#", end="")
             print()
-    
+
     @property
     def size(self):
         """ property size is the size of each side of the square
