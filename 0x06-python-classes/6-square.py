@@ -70,6 +70,9 @@ class Square:
     def my_print(self):
         """ methode my_print prints in stdout the square with the character #
         """
+        if self.__size == 0:
+            print()
+            return
         for y in range(self.__position[1]):
             print()
         for x in range(self.__size):
@@ -77,6 +80,4 @@ class Square:
                 print(" ", end="")
             for y in range(self.__size):
                 print("#", end="")
-            print()
-        if self.__size == 0:
             print()
