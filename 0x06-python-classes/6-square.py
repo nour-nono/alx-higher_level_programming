@@ -24,7 +24,22 @@ class Square:
                the area of the square.
            """
         return self.__size ** 2
-
+    
+    def my_print(self):
+        """ methode my_print prints in stdout the square with the character #
+        """
+        if self.__size == 0:
+            print()
+            return
+        for i in range(self.__position[1]):
+            print()
+        for x in range(self.__size):
+            for j in range(self.__position[0]):
+                print(" ", end="")
+            for z in range(self.__size):
+                print("#", end="")
+            print()
+    
     @property
     def size(self):
         """ property size is the size of each side of the square
@@ -66,18 +81,3 @@ class Square:
         if any(type(i) != int for i in value) or any(j < 0 for j in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
-
-    def my_print(self):
-        """ methode my_print prints in stdout the square with the character #
-        """
-        if self.__size == 0:
-            print()
-            return
-        for y in range(self.__position[1]):
-            print()
-        for x in range(self.__size):
-            for y in range(self.__position[0]):
-                print(" ", end="")
-            for y in range(self.__size):
-                print("#", end="")
-            print()
