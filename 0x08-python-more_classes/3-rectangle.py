@@ -119,5 +119,6 @@ class Rectangle:
         for x in range(self.height):
             for y in range(self.width):
                 s += "#"
+        if x != (self.height - 1):
             s += "\n"
         return s
