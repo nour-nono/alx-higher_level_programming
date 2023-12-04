@@ -10,7 +10,6 @@ def lookup(obj):
 
     Parameters:
         obj (object): The object to inspect.
-    
     Returns:
         list: A list of the object's attributes.
 
