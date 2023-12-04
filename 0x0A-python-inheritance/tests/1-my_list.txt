@@ -49,10 +49,10 @@ TypeError: print_sorted() takes 1 positional argument but 3 were given
 >>> ml.print_sorted()
 [-10, 0, 1, 2, 10, 20, 100]
 
->>> my_list = MyList([1, 4, 2, 3, 5])
->>> my_list.print_sorted()
-[1, 2, 3, 4, 5]
+>>> ml = MyList([1, 4, 2, 3, 5])
+>>> ml.print_sorted()
+[1, 4, 2, 3, 5]
 
->>> my_list = MyList([1])
->>> my_list.print_sorted()
+>>> ml = MyList([1])
+>>> ml.print_sorted()
 [1, 2, 3, 4, 5]
