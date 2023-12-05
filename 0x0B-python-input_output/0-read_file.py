@@ -15,5 +15,4 @@ def read_file(filename=""):
         None
     """
     with open(filename, "r") as fl:
-        x = fl.read()
-        print(x)
+        print(fl.read(), end="")
