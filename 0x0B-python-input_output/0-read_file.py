@@ -14,5 +14,7 @@ def read_file(filename=""):
     Returns:
         None
     """
+    if not isinstance(filename, str):
+        return None
     with open(filename, "r") as fl:
         print(fl.read())
