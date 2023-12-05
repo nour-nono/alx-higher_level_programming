@@ -3,6 +3,8 @@
 This module defines a class `MyList`.
 """
 
-
-def BaseGeometry():
+class BaseGeometry:
+    """
+    This module defines a class `MyList`.
+    """
     pass
