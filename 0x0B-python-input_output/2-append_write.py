@@ -6,7 +6,7 @@ This module provides a function for appending a given text to a specified file.
 
 def append_write(filename="", text=""):
     """
-    Writes a given text to a specified file and returns the length of the written text.
+    Writes a given text to a file and returns the length of text.
 
     Parameters:
         filename (str): The name of the file to write to.
