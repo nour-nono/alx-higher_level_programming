@@ -1,4 +1,4 @@
-MyList = __import__('1-my_list').MyList
+>>> MyList = __import__('1-my_list').MyList
 
 >>> ml = MyList()
 >>> type(ml) == MyList
@@ -48,3 +48,11 @@ TypeError: print_sorted() takes 1 positional argument but 3 were given
 >>> ml = MyList([-10, 0, 1, 2, 10, 20, 100])
 >>> ml.print_sorted()
 [-10, 0, 1, 2, 10, 20, 100]
+
+>>> my_list = MyList([1, 4, 2, 3, 5])
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+>>> my_list = MyList([1])
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
