@@ -15,6 +15,8 @@ def pascal_triangle(n):
         list: A list of lists representing Pascal's Triangle.
     """
     ans = []
+    if n < 1:
+        return ans
     for x in range(n):
         z = [1]
         for y in range(x):
