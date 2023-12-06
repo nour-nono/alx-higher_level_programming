@@ -28,8 +28,4 @@ class Student:
         Returns:
             dict: A dictionary representation of the Student object's attr.
         """
-        ans = {}
-        for x in dir(self):
-            if not x.startswith("__"):
-                ans[x] = self.__getattribute__(x)
-        return ans
+        return self.__dict__
