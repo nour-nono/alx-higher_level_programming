@@ -30,10 +30,15 @@ class Student:
         Returns:
             dict: A dictionary representation of the Student object's attr.
         """
+        if not isinstance(attrs, list):
+            return self.__dict__
         ans = {}
         for x in attrs:
             if not isinstance(x, str):
                 return self.__dict__
             else:
-                ans[x] = self.__getattribute__(x)
+                try:
+                    ans[x] = self.__getattribute__(x)
+                except AttributeError:
+                    pass
         return ans
