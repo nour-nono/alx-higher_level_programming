@@ -51,4 +51,5 @@ class Student:
             json (dict): A dictionary to reload the Student object from.
         """
         for x, y in json.items():
-            self.__dict__[x] = y
+            if x in self.__dict__:
+                self.__dict__[x] = y
