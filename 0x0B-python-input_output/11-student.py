@@ -52,6 +52,6 @@ class Student:
         """
         for x, y in json.items():
             try:
-                self.x = y
+                self.__dict__[x] = y
             except Exception:
                 pass
