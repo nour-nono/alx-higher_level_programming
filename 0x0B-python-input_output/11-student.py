@@ -50,8 +50,8 @@ class Student:
         Args:
             json (dict): A dictionary to reload the Student object from.
         """
-        for x in json:
+        for x, y in json.items():
             try:
-                self.x = json[x]
+                self.x = y
             except Exception:
                 pass
