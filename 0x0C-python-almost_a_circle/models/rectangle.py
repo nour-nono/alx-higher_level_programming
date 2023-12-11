@@ -36,7 +36,7 @@ class Rectangle(Base):
         Returns:
            int: The y-coordinate of the rectangle's position.
         """
-        return self.__width
+        return self.__y
 
     @y.setter
     def y(self, value):
@@ -54,7 +54,7 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
-        self.__x = value
+        self.__y = value
 
     @property
     def x(self):
@@ -64,7 +64,7 @@ class Rectangle(Base):
         Returns:
            int: The x-coordinate of the rectangle's position.
         """
-        return self.__width
+        return self.__x
 
     @x.setter
     def x(self, value):
