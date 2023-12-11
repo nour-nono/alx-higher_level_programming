@@ -212,3 +212,7 @@ class Rectangle(Base):
             if x != (self.height - 1):
                 s += "\n"
         print(s)
+
+    def to_dictionary(self):
+        return {'x': self.__x, 'y': self.__y,
+                'id': self.id, 'height': self.__height, 'width': self.__width}
