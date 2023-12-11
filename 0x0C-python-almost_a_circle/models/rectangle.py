@@ -28,7 +28,7 @@ class Rectangle(Base):
         self.width = width
         self.height = height
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         update the object.
 
