@@ -214,5 +214,11 @@ class Rectangle(Base):
         print(s)
 
     def to_dictionary(self):
-        return {"x": self.__x, "y": self.__y,
-                "id": self.id, "height": self.__height, "width": self.__width}
+        """
+        Convert the properties of the rectangle object into a dictionary.
+
+        Returns:
+            dict: A dictionary representation of the rectangle.
+        """
+        return {'x': self.__x, 'y': self.__y,
+                'id': self.id, 'height': self.__height, 'width': self.__width}

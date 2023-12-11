@@ -57,5 +57,11 @@ class Square(Rectangle):
                 self.y = v
 
     def to_dictionary(self):
+        """
+        Convert the properties of the square object into a dictionary.
+
+        Returns:
+            dict: A dictionary representation of the square.
+        """
         return {'id': self.id, 'x': self.x,
                 'size': self.size, 'y': self.y}
