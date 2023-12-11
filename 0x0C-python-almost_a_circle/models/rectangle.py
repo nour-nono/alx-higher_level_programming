@@ -148,3 +148,20 @@ class Rectangle(Base):
             int: The area of the rectangle.
         """
         return self.width * self.height
+
+    def display(self):
+        """
+        print a string representation of the rectangle.
+
+        The rectangle is represented as a string of '#' characters,
+         with one '#' character for each unit of width and height.
+        """
+        s = ""
+        if self.height == 0 or self.width == 0:
+            return s
+        for x in range(self.height):
+            for y in range(self.width):
+                s += "#"
+            if x != (self.height - 1):
+                s += "\n"
+        print(s)
