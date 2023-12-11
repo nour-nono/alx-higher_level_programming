@@ -28,6 +28,28 @@ class Rectangle(Base):
         self.width = width
         self.height = height
 
+    def update(self, *args):
+        """
+        update the object.
+
+        Args:
+            id (int, optional): The id of the object.
+            width (int, optional): The width of the rectangle.
+            height (int, optional): The height of the rectangle.
+            x (int, optional): The x-coordinate of the rectangle's position.
+            y (int, optional): The y-coordinate of the rectangle's position.
+        """
+        if len(args) > 0:
+            self.id = args[0]
+        if len(args) > 3:
+            self.x = args[3]
+        if len(args) > 4:
+            self.y = args[4]
+        if len(args) > 1:
+            self.width = args[1]
+        if len(args) > 2:
+            self.height = args[2]
+
     @property
     def y(self):
         """
