@@ -7,7 +7,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """
-    A class representing a rectangle with properties for width, height, and position.
+    A class rectangle with properties for width, height, and position.
     """
     __nb_objects = 0
 
