@@ -149,6 +149,16 @@ class Rectangle(Base):
         """
         return self.width * self.height
 
+    def __str__(self):
+        """
+        Return a string representation of the Rectangle object.
+
+        Returns:
+            str: A string representation of the Rectangle object
+        """
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - \
+{self.width}/{self.height}"
+
     def display(self):
         """
         print a string representation of the rectangle.
@@ -159,19 +169,13 @@ class Rectangle(Base):
         s = ""
         if self.height == 0 or self.width == 0:
             return s
+        for a in range(self.y):
+            s += "\n"
         for x in range(self.height):
+            for b in range(self.x):
+                s += " "
             for y in range(self.width):
                 s += "#"
             if x != (self.height - 1):
                 s += "\n"
         print(s)
-
-    def __str__(self):
-        """
-        Return a string representation of the Rectangle object.
-
-        Returns:
-            str: A string representation of the Rectangle object
-        """
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - \
-{self.width}/{self.height}"
