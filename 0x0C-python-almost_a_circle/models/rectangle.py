@@ -49,6 +49,17 @@ class Rectangle(Base):
             self.width = args[1]
         if len(args) > 2:
             self.height = args[2]
+        for k, v in kwargs.items():
+            if k == "id" and v is not None:
+                self.id = v
+            elif k == "width" and v is not None:
+                self.width = v
+            elif k == "height" and v is not None:
+                self.height = v
+            elif k == "x" and v is not None:
+                self.x = v
+            elif k == "y" and v is not None:
+                self.y = v
 
     @property
     def y(self):
