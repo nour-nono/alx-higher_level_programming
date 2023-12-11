@@ -7,7 +7,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """
-    A class rectangle with properties for width, height, and position.
+    A class representing a rectangle with properties for width, height, and position.
     """
     __nb_objects = 0
 
@@ -50,11 +50,11 @@ class Rectangle(Base):
            TypeError: If the y-coordinate is not an integer.
            ValueError: If the y-coordinate is less than 0.
         """
-        if not isinstance(value, int) and not isinstance(value, float):
-            raise TypeError("height must be an integer or float")
+        if not isinstance(value, int):
+            raise TypeError("y must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0")
-        self.__y = value
+            raise ValueError("y must be >= 0")
+        self.__x = value
 
     @property
     def x(self):
@@ -78,10 +78,10 @@ class Rectangle(Base):
            TypeError: If the x-coordinate is not an integer.
            ValueError: If the x-coordinate is less than 0.
         """
-        if not isinstance(value, int) and not isinstance(value, float):
-            raise TypeError("height must be an integer or float")
+        if not isinstance(value, int):
+            raise TypeError("x must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -106,10 +106,10 @@ class Rectangle(Base):
            TypeError: If the width is not an integer.
            ValueError: If the width is less than 0.
         """
-        if not isinstance(value, int) and not isinstance(value, float):
-            raise TypeError("height must be an integer or float")
-        if value < 0:
-            raise ValueError("width must be >= 0")
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -134,8 +134,8 @@ class Rectangle(Base):
            TypeError: If the height is not an integer.
            ValueError: If the height is less than 0.
         """
-        if not isinstance(value, int) and not isinstance(value, float):
-            raise TypeError("height must be an integer or float")
-        if value < 0:
-            raise ValueError("height must be >= 0")
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
