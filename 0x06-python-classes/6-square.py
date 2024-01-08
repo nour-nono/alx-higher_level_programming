@@ -28,15 +28,15 @@ class Square:
     def my_print(self):
         """ methode my_print prints in stdout the square with the character #
         """
-        if self.__size == 0:
+        if self.size == 0:
             print()
             return
-        for i in range(self.__position[1]):
+        for i in range(self.position[1]):
             print()
-        for x in range(self.__size):
-            for j in range(self.__position[0]):
+        for x in range(self.size):
+            for j in range(self.position[0]):
                 print(" ", end="")
-            for z in range(self.__size):
+            for z in range(self.size):
                 print("#", end="")
             print()
 
