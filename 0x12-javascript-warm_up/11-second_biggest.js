@@ -7,5 +7,5 @@ if (process.argv.length < 4) {
     arr[index] = +arr[index];
   }
   arr.sort().reverse();
-  console.log(arr[1] || 0);
+  console.log(arr[1]);
 }
