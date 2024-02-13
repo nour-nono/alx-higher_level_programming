@@ -6,8 +6,8 @@ module.exports = class Rectangle {
       this.height = h;
     }
     this.print = function () {
-      for (let i = 0; i < this.width; i++) {
-        for (let j = 0; j < this.height; j++) {
+      for (let i = 0; i < this.height; i++) {
+        for (let j = 0; j < this.width; j++) {
           process.stdout.write("X");
         }
         console.log();
