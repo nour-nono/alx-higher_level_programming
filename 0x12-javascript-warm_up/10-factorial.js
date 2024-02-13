@@ -8,4 +8,4 @@ function factorial(a) {
     }
     return a*factorial(a-1);
 }
-console.log(factorial(process.argv[2]));
+console.log(factorial(+process.argv[2]));
