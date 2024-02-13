@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let arr = process.argv.slice(2);
+const let arr = process.argv.slice(2);
 for (let index = 0; index < arr.length; index++) {
   arr[index] = +arr[index];
 }
