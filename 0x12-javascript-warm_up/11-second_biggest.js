@@ -6,6 +6,6 @@ if (process.argv.length < 4) {
   for (let index = 0; index < arr.length; index++) {
     arr[index] = +arr[index];
   }
-  arr.sort().reverse();
+  arr.sort((a, b) => (b - a));
   console.log(arr[1]);
 }
