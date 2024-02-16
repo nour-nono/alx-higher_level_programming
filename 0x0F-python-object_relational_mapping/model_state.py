@@ -9,7 +9,7 @@ Base = declarative_base()
 class State(Base):
     """
     Represents a state with an ID and a name.
-    
+
     Attributes:
         id (int): The unique identifier of the state.
         name (str): The name of the state.
