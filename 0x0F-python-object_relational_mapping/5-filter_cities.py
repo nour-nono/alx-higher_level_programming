@@ -20,8 +20,9 @@ if __name__ == "__main__":
                 " WHERE state_id IN ("
                 " SELECT id"
                 " FROM states"
+                " WHERE name = %s"
                 ")"
-                " ORDER BY id")
+                " ORDER BY id", (sys.argv[4],))
     rows = cur.fetchall()
     ls = ", ".join([x for x in rows])
     print(ls)
