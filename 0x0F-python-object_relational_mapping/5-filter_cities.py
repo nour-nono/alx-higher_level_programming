@@ -24,7 +24,7 @@ if __name__ == "__main__":
                 ")"
                 " ORDER BY id", (sys.argv[4],))
     rows = cur.fetchall()
-    ls = ", ".join([x for x in rows])
+    ls = ", ".join([row[0] for row in rows])
     print(ls)
     cur.close()
     db.close()
