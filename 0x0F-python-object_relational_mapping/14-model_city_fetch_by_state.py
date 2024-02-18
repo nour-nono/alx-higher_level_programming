@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""prints all City objects
-from the database hbtn_0e_14_usa"""
+"""prints all City objectsfrom the database hbtn_0e_14_usa"""
 
 if __name__ == "__main__":
 
@@ -18,7 +17,7 @@ if __name__ == "__main__":
 
     session = Session(engine)
     for state, city in session.query(State, City)\
-                              .filter(City.state_id == State.id)\
-                              .order_by(City.id).all():
+                                  .filter(City.state_id == State.id)\
+                                  .order_by(City.id).all():
             print("{}: ({}) {}".format(state.name, city.id, city.name))
     session.close()
