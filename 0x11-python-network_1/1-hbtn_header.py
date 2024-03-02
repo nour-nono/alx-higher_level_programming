@@ -6,6 +6,6 @@ found in the header of the response.
 """
 import urllib.request
 import sys
-
-with urllib.request.urlopen(sys.argv[1]) as response:
+req = urllib.request.Request(sys.argv[1])
+with urllib.request.urlopen(req) as response:
 	print(response.info().get('X-Request-Id'))
