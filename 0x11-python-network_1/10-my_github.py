@@ -16,9 +16,8 @@ if __name__ == "__main__":
         "Accept": "application/vnd.github.v3+json",
         "X-GitHub-Api-Version": "2022-11-28"
     }
-    #basic = HTTPBasicAuth(username=sys.argv[1], password=sys.argv[2])
-    #r = requests.get(url, auth=basic)
-    r = requests.get(url, auth=(sys.argv[1], sys.argv[2]))
+    basic = HTTPBasicAuth(username=sys.argv[1], password=sys.argv[2])
+    r = requests.get(url, auth=basic)
 
     res = r.json()
     user_id = res.get("id")
