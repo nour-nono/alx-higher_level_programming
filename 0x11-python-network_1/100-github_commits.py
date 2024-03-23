@@ -1,12 +1,18 @@
 #!/usr/bin/python3
-""" A Python script that takes your GitHub
-credentials (username and personal access token)
-and uses the GitHub API to display your id
-"""
+"""Show the lastone ten commits in a repo github"""
+import requests
+from sys import argv
 
 if __name__ == "__main__":
-    import requests
-    import sys
-    r = requests.get(url=f"https://api.github.com/repos/{sys.argv[2]}/{sys.argv[1]}/commits")
-    for i in range(10):
-	      print(r.json()[i]['sha'], r.json()[i]['commit']['author']['name'])
+    count = 0
+    page = "https://api.github.com/repos/{}/{}/commits".format(
+        argv[2], argv[1])
+
+    req = requests.get(page)
+    for commit in req.json():
+        sha = commit.get("sha")
+        author = commit.get("commit").get("author").get("name")
+        print("{}: {}".format(sha, author))
+        count += 1
+        if count > 9:
+            break
