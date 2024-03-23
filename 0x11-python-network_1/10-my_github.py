@@ -17,7 +17,7 @@ if __name__ == "__main__":
         "X-GitHub-Api-Version": "2022-11-28"
     }
     basic = HTTPBasicAuth(username=sys.argv[1], password=sys.argv[2])
-    r = requests.get(url, auth=basic)
+    r = requests.get(url, auth=basic, headers=headers)
 
     res = r.json()
     user_id = res.get("id")
