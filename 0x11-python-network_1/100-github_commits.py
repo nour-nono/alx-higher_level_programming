@@ -8,5 +8,6 @@ if __name__ == "__main__":
     count = 0
     for i in r.json():
         print(f"{i.get('sha')}: {i.get('commit').get('author').get('name')}")
+        count += 1
         if count > 9:
             break
