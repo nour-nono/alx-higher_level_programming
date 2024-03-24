@@ -7,7 +7,9 @@ if __name__ == "__main__":
     r = requests.get(u)
     count = 0
     for i in r.json():
-        print(f'{i.get("sha")}: {i.get("commit").get("author").get("name")}')
+        sha = i.get("sha")
+        auth = i.get("commit").get("author").get("name")
+        print(f'{sha}: {auth}')
         count += 1
         if count > 9:
             break
